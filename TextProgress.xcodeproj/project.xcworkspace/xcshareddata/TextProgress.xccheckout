@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>IDESourceControlProjectFavoriteDictionaryKey</key>
+	<false/>
+	<key>IDESourceControlProjectIdentifier</key>
+	<string>97E99E80-EA17-4F34-9CFB-D2E23AD6AFAD</string>
+	<key>IDESourceControlProjectName</key>
+	<string>TextProgress</string>
+	<key>IDESourceControlProjectOriginsDictionary</key>
+	<dict>
+		<key>CF238A2C3342DA64A57AB61E703E105141F78F2F</key>
+		<string>https://github.com/cgwangding/TextProgress.git</string>
+	</dict>
+	<key>IDESourceControlProjectPath</key>
+	<string>TextProgress.xcodeproj</string>
+	<key>IDESourceControlProjectRelativeInstallPathDictionary</key>
+	<dict>
+		<key>CF238A2C3342DA64A57AB61E703E105141F78F2F</key>
+		<string>../..</string>
+	</dict>
+	<key>IDESourceControlProjectURL</key>
+	<string>https://github.com/cgwangding/TextProgress.git</string>
+	<key>IDESourceControlProjectVersion</key>
+	<integer>111</integer>
+	<key>IDESourceControlProjectWCCIdentifier</key>
+	<string>CF238A2C3342DA64A57AB61E703E105141F78F2F</string>
+	<key>IDESourceControlProjectWCConfigurations</key>
+	<array>
+		<dict>
+			<key>IDESourceControlRepositoryExtensionIdentifierKey</key>
+			<string>public.vcs.git</string>
+			<key>IDESourceControlWCCIdentifierKey</key>
+			<string>CF238A2C3342DA64A57AB61E703E105141F78F2F</string>
+			<key>IDESourceControlWCCName</key>
+			<string>TextProgress</string>
+		</dict>
+	</array>
+</dict>
+</plist>

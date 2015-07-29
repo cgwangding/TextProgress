@@ -23,9 +23,11 @@
     if (self = [super initWithFrame:frame]) {
         self.customFontName = @"Helvetica-Bold";
         self.fontSize = 200;
+        self.strokeWidth = 1;
         self.strokeColor = [UIColor colorWithRed:235/255.0 green:235/255.0 blue:235/255.0 alpha:1];
         self.fillColor = [UIColor greenColor];
         self.number = nuberStr;
+        self.upperFillColor  = [UIColor whiteColor];
         if (nuberStr == nil) {
             self.number = @"0";
         }
@@ -92,7 +94,7 @@
     CGContextTranslateCTM(context, 0, textBounds.size.height);
     CGContextRotateCTM(context, M_PI);
     CGContextAddPath(context, path.CGPath);
-    CGContextSetLineWidth(context, 1);
+    CGContextSetLineWidth(context, self.strokeWidth);
     CGContextSetStrokeColorWithColor(context, self.strokeColor.CGColor);
     CGContextStrokePath(context);
     
@@ -106,7 +108,8 @@
     CGContextFillRect(context, CGRectMake(0, -10, self.frame.size.width, (textBounds.size.height + 10) * ratio));
 
     
-    CGContextSetFillColorWithColor(context, [UIColor redColor].CGColor);
+    //填充上半部分的颜色
+    CGContextSetFillColorWithColor(context, self.upperFillColor.CGColor);
     CGContextAddPath(context, path.CGPath);
     CGContextClip(context);
     CGContextFillRect(context, CGRectMake(0, (textBounds.size.height  - 10)* ratio , self.frame.size.width, (textBounds.size.height + 10) * (1 - ratio)));
