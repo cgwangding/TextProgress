@@ -37,6 +37,11 @@
 @property (nonatomic, strong) UIColor *upperFillColor;
 
 /**
+ *  是否使用水波动画，默认不开启
+ */
+@property (nonatomic, assign) BOOL waveAnimation;
+
+/**
  *  使用数字初始化
  *
  *  @param frame    frame，数字的绘制区域
@@ -46,7 +51,17 @@
  */
 - (instancetype)initWithFrame:(CGRect)frame number:(NSString*)nuberStr;
 
+/**
+ *  设置需要显示的数字
+ *
+ *  @param numberStr 数字字符串，数字内容0-100
+ */
 - (void)setDisplayNumber:(NSString*)numberStr;
+
+/**
+ *  使timer失效，当开启水波动画时请在页面消失时手动调用该方法
+ */
+- (void)invalidateTimer;
 
 
 @end
