@@ -22,10 +22,11 @@
     [super viewDidLoad];
     // Do any additional setup after loading the view, typically from a nib.
     TextProgressView *view = [[TextProgressView alloc]initWithFrame:self.view.bounds number:@"90"];
+    view.waveAnimation = YES;
     view.backgroundColor = [UIColor whiteColor];
     [self.view addSubview:view];
     
-    [view setDisplayNumber:@"50"];
+    [view setDisplayNumber:@"99"];
 
     
 }

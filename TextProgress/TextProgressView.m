@@ -124,9 +124,12 @@
     if ([self.number floatValue]) {
         ratio = [self.number floatValue] / 100;
     }
-        self.fillHeight = (textBounds.size.height + 10) * ratio;
+    self.fillHeight = (textBounds.size.height) * ratio;
+    if (self.animateFillHeight > self.fillHeight) {
+        self.animateFillHeight = self.fillHeight;
+    }
     if (self.waveAnimation == NO) {
-        CGContextFillRect(context, CGRectMake(0, -10, self.frame.size.width, self.animateFillHeight));
+        CGContextFillRect(context, CGRectMake(0,textBounds.origin.y, self.frame.size.width, self.animateFillHeight));
     }
     
     
@@ -135,7 +138,7 @@
     CGContextSetFillColorWithColor(context, self.upperFillColor.CGColor);
     CGContextAddPath(context, path.CGPath);
     CGContextClip(context);
-    CGContextFillRect(context, CGRectMake(0, (textBounds.size.height  - 10)* ratio , self.frame.size.width, textBounds.size.height - self.animateFillHeight));
+    CGContextFillRect(context, CGRectMake(0, self.animateFillHeight + (textBounds.origin.y >0?-textBounds.origin.y:textBounds.origin.y), self.frame.size.width, textBounds.size.height - self.animateFillHeight));
     
     if (self.waveAnimation) {
         //画水波
@@ -213,8 +216,6 @@
     offsetX += 0.5/M_PI;
     
     [self setNeedsDisplay];
-    
-    
 }
 
 
